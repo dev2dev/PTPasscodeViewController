@@ -1,0 +1,138 @@
+UIPasscodeViewController
+========================
+
+Want a Passcode view for your iPhone/iPod project ? 
+Here's how to add a UIPasscodeViewController on your project with a few lines of code.
+
+
+![](http://files.me.com/lashad/x16phr)
+![](http://files.me.com/lashad/sa5cbk)
+![](http://files.me.com/lashad/0mxg45)
+
+How to use
+----------
+
+1. Copy UIPasscodeViewController.m and UIPasscodeViewController.h files to your source tree and add it to XCode project.
+2. Import "UIPasscodeViewController.h" from your code.
+3. Implement UIPasscodeViewControllerDelegate protocol.
+
+
+Just #import the UIPasscodeViewController.h header
+
+`#import "UIPasscodeViewController.h"`
+
+
+Simple example of how to create UIPasscodeViewController:
+
+`
+    UIPasscodeViewController *passcodeViewController = [[UIPasscodeViewController alloc] initWithDelegate:self];
+    
+    UINavigationController *navController = [[UINavigationController alloc]
+                                             initWithRootViewController:passcodeViewController];
+    
+    [self setNavigationController:navController];
+    
+    [window addSubview:[navController view]];
+    [window makeKeyAndVisible];
+    
+    [window release];
+    [navController release];
+`
+
+Your class will have to implement the UIPasscodeViewControllerDelegate protocol, and to implement the `didShowPasscodePanel:panelView:`, `shouldChangePasscode:panelView:passCode:lastNumber:` and `didEndPasscodeEditing:panelView:passCode:` methods from this protocol:
+
+`
+- (void) didShowPasscodePanel:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView
+{
+    [passcodeView setTitle:@"Set Passcode"];
+    
+    if([panelView tag] == kPasscodePanelOne) {
+       [[passcodeView titleLabel] setText:@"Enter a passcode"];
+    }
+
+    if([panelView tag] == kPasscodePanelTwo) {
+        [[passcodeView titleLabel] setText:@"Re-enter your passcode"];
+    }
+
+    if([panelView tag] == kPasscodePanelThree) {
+        [[passcodeView titleLabel] setText:@"Panel 3"];
+    }
+}
+
+- (BOOL)shouldChangePasscode:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode lastNumber:(NSInteger)lastNumber;
+{
+    // Clear summary text
+    [[passcodeView summaryLabel] setText:@""];
+
+    return TRUE;
+}
+
+- (BOOL)didEndPasscodeEditing:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode
+{
+    
+    NSLog(@"END PASSCODE - %d", passCode);
+    
+    if([panelView tag] == kPasscodePanelOne) {
+        _passCode = passCode;
+        
+        return ![passcodeView nextPanel];
+    }
+
+    if([panelView tag] == kPasscodePanelTwo) {
+        _retryPassCode = passCode;
+        
+        if(_retryPassCode != _passCode) {
+            [passcodeView prevPanel];
+            [[passcodeView summaryLabel] setText:@"Passcode did not match. Try again."];
+            return FALSE;
+        } else {
+            [[passcodeView summaryLabel] setText:@"Good boy !"];    
+        }
+        
+    }
+    
+    return TRUE;
+}
+`
+
+Class References
+----------------
+
+### UIPasscodeViewController
+
+#### initWithDelegate
+
+`-(id)initWithDelegate:(id)delegate`
+
+Initializes a UIPasscodeView.
+
+#### titleLabel
+
+`UILabel *titleLabel`
+
+The label used for the Passcode title.
+
+#### summaryLabel
+
+`UILabel *summaryLabel`
+
+The label used to show a summary text of the Passcode.
+
+#### clearPanel
+
+`- (void)clearPanel`
+
+Reset current panel passcode view.
+
+#### prevPanel
+
+`-(BOOL)prevPanel`
+
+Switch to the previous passcode panel.
+
+#### nextPanel
+
+`-(BOOL)nextPanel`
+
+Switch to the next passcode panel.
+
