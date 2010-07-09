@@ -25,8 +25,7 @@ Just #import the UIPasscodeViewController.h header
 Simple example of how to create UIPasscodeViewController:
 
 `UIPasscodeViewController *passcodeViewController = [[UIPasscodeViewController alloc] initWithDelegate:self];
- UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:passcodeViewController];
-
+UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:passcodeViewController];
 [self setNavigationController:navController];
 [window addSubview:[navController view]];
 [window makeKeyAndVisible];
