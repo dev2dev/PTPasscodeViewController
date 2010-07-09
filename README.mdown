@@ -24,25 +24,22 @@ Just #import the UIPasscodeViewController.h header
 
 Simple example of how to create UIPasscodeViewController:
 
-`
-    UIPasscodeViewController *passcodeViewController = [[UIPasscodeViewController alloc] initWithDelegate:self];
+`UIPasscodeViewController *passcodeViewController = [[UIPasscodeViewController alloc] initWithDelegate:self];
     
-    UINavigationController *navController = [[UINavigationController alloc]
+ UINavigationController *navController = [[UINavigationController alloc]
                                              initWithRootViewController:passcodeViewController];
     
-    [self setNavigationController:navController];
+ [self setNavigationController:navController];
     
-    [window addSubview:[navController view]];
-    [window makeKeyAndVisible];
-    
-    [window release];
-    [navController release];
-`
+ [window addSubview:[navController view]];
+ [window makeKeyAndVisible];
+  
+ [window release];
+ [navController release];`
 
 Your class will have to implement the UIPasscodeViewControllerDelegate protocol, and to implement the `didShowPasscodePanel:panelView:`, `shouldChangePasscode:panelView:passCode:lastNumber:` and `didEndPasscodeEditing:panelView:passCode:` methods from this protocol:
 
-`
-- (void) didShowPasscodePanel:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView
+`- (void) didShowPasscodePanel:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView
 {
     [passcodeView setTitle:@"Set Passcode"];
     
@@ -92,8 +89,7 @@ Your class will have to implement the UIPasscodeViewControllerDelegate protocol,
     }
     
     return TRUE;
-}
-`
+}`
 
 Class References
 ----------------
