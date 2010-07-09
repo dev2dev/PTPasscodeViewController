@@ -56,40 +56,41 @@ Your class will have to implement the UIPasscodeViewControllerDelegate protocol,
         }
     }
 
-- (BOOL)shouldChangePasscode:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode lastNumber:(NSInteger)lastNumber;
-{
-    // Clear summary text
-    [[passcodeView summaryLabel] setText:@""];
+    - (BOOL)shouldChangePasscode:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode lastNumber:(NSInteger)lastNumber;
+    {
+        // Clear summary text
+        [[passcodeView summaryLabel] setText:@""];
 
-    return TRUE;
-}
-
-- (BOOL)didEndPasscodeEditing:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode
-{
-    
-    NSLog(@"END PASSCODE - %d", passCode);
-    
-    if([panelView tag] == kPasscodePanelOne) {
-        _passCode = passCode;
-        
-        return ![passcodeView nextPanel];
+        return TRUE;
     }
 
-    if([panelView tag] == kPasscodePanelTwo) {
-        _retryPassCode = passCode;
+    - (BOOL)didEndPasscodeEditing:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode
+    {
         
-        if(_retryPassCode != _passCode) {
-            [passcodeView prevPanel];
-            [[passcodeView summaryLabel] setText:@"Passcode did not match. Try again."];
-            return FALSE;
-        } else {
-            [[passcodeView summaryLabel] setText:@"Good boy !"];    
+        NSLog(@"END PASSCODE - %d", passCode);
+        
+        if([panelView tag] == kPasscodePanelOne) {
+            _passCode = passCode;
+            
+            return ![passcodeView nextPanel];
+        }
+
+        if([panelView tag] == kPasscodePanelTwo) {
+            _retryPassCode = passCode;
+            
+            if(_retryPassCode != _passCode) {
+                [passcodeView prevPanel];
+                [[passcodeView summaryLabel] setText:@"Passcode did not match. Try again."];
+                return FALSE;
+            } else {
+                [[passcodeView summaryLabel] setText:@"Good boy !"];    
+            }
+            
         }
         
+        return TRUE;
     }
-    
-    return TRUE;
-}`
+
 
 Class References
 ----------------
