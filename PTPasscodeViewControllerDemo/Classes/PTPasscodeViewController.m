@@ -1,22 +1,22 @@
 //
 //  RootViewController.m
-//  UIPasscodeViewControllerDemo
+//  PTPasscodeViewControllerDemo
 //
 //  Created by Lasha Dolidze on 7/7/10.
 //  Copyright Picktek LLC 2010. All rights reserved.
 //
 
-#import "UIPasscodeViewController.h"
+#import "PTPasscodeViewController.h"
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Private Methods
-@interface UIPasscodeViewController (Private)
+@interface PTPasscodeViewController (Private)
 - (UITextField*) createPasscodeEntry:(CGRect)textFieldFrame tag:(NSInteger)tag;
 - (UIView*) createPanel:(CGRect)rect tagIndex:(NSInteger)tagIndex;
 - (void) switchPanel:(NSInteger)panelTag;
 @end
 
-@implementation UIPasscodeViewController
+@implementation PTPasscodeViewController
 
 @synthesize currentPanel;
 @synthesize delegate = _delegate;

@@ -1,16 +1,16 @@
 //
-//  UIPasscodeViewControllerDemoAppDelegate.m
-//  UIPasscodeViewControllerDemo
+//  PTPasscodeViewControllerDemoAppDelegate.m
+//  PTPasscodeViewControllerDemo
 //
 //  Created by Lasha Dolidze on 7/7/10.
 //  Copyright Picktek LLC 2010. All rights reserved.
 //
 
-#import "UIPasscodeViewControllerDemoAppDelegate.h"
-#import "UIPasscodeViewController.h"
+#import "PTPasscodeViewControllerDemoAppDelegate.h"
+#import "PTPasscodeViewController.h"
 
 
-@implementation UIPasscodeViewControllerDemoAppDelegate
+@implementation PTPasscodeViewControllerDemoAppDelegate
 
 @synthesize window = _window;
 @synthesize navigationController = _navigationController;
@@ -29,7 +29,7 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
     CGRect rect = [[UIScreen mainScreen] bounds];
@@ -37,7 +37,7 @@
     [self setWindow:window];
     
     
-    UIPasscodeViewController *passcodeViewController = [[UIPasscodeViewController alloc] initWithDelegate:self];
+    PTPasscodeViewController *passcodeViewController = [[PTPasscodeViewController alloc] initWithDelegate:self];
     
     UINavigationController *navController = [[UINavigationController alloc]
                                              initWithRootViewController:passcodeViewController];
@@ -49,6 +49,8 @@
     
     [window release];
     [navController release];
+    
+    return TRUE;
 }
 
 
@@ -57,32 +59,32 @@
 }
 
 
-- (void) didShowPasscodePanel:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView
+- (void) didShowPasscodePanel:(PTPasscodeViewController *)passcodeViewController panelView:(UIView*)panelView
 {
-    [passcodeView setTitle:@"Set Passcode"];
+    [passcodeViewController setTitle:@"Set Passcode"];
     
     if([panelView tag] == kPasscodePanelOne) {
-       [[passcodeView titleLabel] setText:@"Enter a passcode"];
+       [[passcodeViewController titleLabel] setText:@"Enter a passcode"];
     }
 
     if([panelView tag] == kPasscodePanelTwo) {
-        [[passcodeView titleLabel] setText:@"Re-enter your passcode"];
+        [[passcodeViewController titleLabel] setText:@"Re-enter your passcode"];
     }
 
     if([panelView tag] == kPasscodePanelThree) {
-        [[passcodeView titleLabel] setText:@"Panel 3"];
+        [[passcodeViewController titleLabel] setText:@"Panel 3"];
     }
 }
 
-- (BOOL)shouldChangePasscode:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode lastNumber:(NSInteger)lastNumber;
+- (BOOL)shouldChangePasscode:(PTPasscodeViewController *)passcodeViewController panelView:(UIView*)panelView passCode:(NSUInteger)passCode lastNumber:(NSInteger)lastNumber;
 {
     // Clear summary text
-    [[passcodeView summaryLabel] setText:@""];
+    [[passcodeViewController summaryLabel] setText:@""];
 
     return TRUE;
 }
 
-- (BOOL)didEndPasscodeEditing:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode
+- (BOOL)didEndPasscodeEditing:(PTPasscodeViewController *)passcodeViewController panelView:(UIView*)panelView passCode:(NSUInteger)passCode
 {
     
     NSLog(@"END PASSCODE - %d", passCode);
@@ -98,18 +100,18 @@
             return FALSE;
         }
  */
-        return ![passcodeView nextPanel];
+        return ![passcodeViewController nextPanel];
     }
 
     if([panelView tag] == kPasscodePanelTwo) {
         _retryPassCode = passCode;
         
         if(_retryPassCode != _passCode) {
-            [passcodeView prevPanel];
-            [[passcodeView summaryLabel] setText:@"Passcode did not match. Try again."];
+            [passcodeViewController prevPanel];
+            [[passcodeViewController summaryLabel] setText:@"Passcode did not match. Try again."];
             return FALSE;
         } else {
-            [[passcodeView summaryLabel] setText:@"Good boy !"];    
+            [[passcodeViewController summaryLabel] setText:@"Good boy !"];    
         }
         
     }

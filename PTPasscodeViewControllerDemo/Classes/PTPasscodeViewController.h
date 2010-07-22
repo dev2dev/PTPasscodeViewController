@@ -1,6 +1,6 @@
 //
 //  RootViewController.h
-//  UIPasscodeViewControllerDemo
+//  PTPasscodeViewControllerDemo
 //
 //  Created by Lasha Dolidze on 7/7/10.
 //  Copyright Picktek LLC 2010. All rights reserved.
@@ -29,7 +29,7 @@
 @protocol PasscodeViewControllerDelegate;
 
 
-@interface UIPasscodeViewController : UITableViewController <UITextFieldDelegate> {
+@interface PTPasscodeViewController : UITableViewController <UITextFieldDelegate> {
     
     UIView *_scrollView;
     UIView *currentPanel;
@@ -52,8 +52,8 @@
 
 @protocol PasscodeViewControllerDelegate <NSObject>
 @optional
-- (BOOL)shouldChangePasscode:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode lastNumber:(NSInteger)lastNumber;
-- (void)didShowPasscodePanel:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView;
-- (BOOL)didEndPasscodeEditing:(UIPasscodeViewController *)passcodeView panelView:(UIView*)panelView passCode:(NSUInteger)passCode;
+- (BOOL)shouldChangePasscode:(PTPasscodeViewController *)passcodeViewController panelView:(UIView*)panelView passCode:(NSUInteger)passCode lastNumber:(NSInteger)lastNumber;
+- (void)didShowPasscodePanel:(PTPasscodeViewController *)passcodeViewController panelView:(UIView*)panelView;
+- (BOOL)didEndPasscodeEditing:(PTPasscodeViewController *)passcodeViewController panelView:(UIView*)panelView passCode:(NSUInteger)passCode;
 
 @end

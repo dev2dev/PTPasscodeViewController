@@ -1,0 +1,204 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* PTPasscodeViewControllerDemoAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1023, 518}}";
+			sepNavSelRange = "{81, 0}";
+			sepNavVisRange = "{0, 641}";
+		};
+	};
+	1D3623250D0F684500981E51 /* PTPasscodeViewControllerDemoAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1216, 1651}}";
+			sepNavSelRange = "{3273, 0}";
+			sepNavVisRange = "{2448, 970}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* PTPasscodeViewControllerDemo */ = {
+		activeExec = 0;
+		executables = (
+			C63D0ACE11E63C350073BFE0 /* UIPasscodeViewControllerDemo */,
+		);
+	};
+	28A0AAE50D9B0CCF005BE974 /* PTPasscodeViewControllerDemo_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {908, 423}}";
+			sepNavSelRange = "{362, 0}";
+			sepNavVisRange = "{0, 362}";
+		};
+	};
+	28C286DF0D94DF7D0034E888 /* PTPasscodeViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1216, 767}}";
+			sepNavSelRange = "{1638, 0}";
+			sepNavVisRange = "{426, 1278}";
+		};
+	};
+	28C286E00D94DF7D0034E888 /* PTPasscodeViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 3796}}";
+			sepNavSelRange = "{5935, 0}";
+			sepNavVisRange = "{4468, 1630}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = C63D0ACE11E63C350073BFE0 /* UIPasscodeViewControllerDemo */;
+		activeSDKPreference = iphonesimulator4.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* PTPasscodeViewControllerDemo */;
+		codeSenseManager = C63D0B0A11E63C790073BFE0 /* Code sense */;
+		executables = (
+			C63D0ACE11E63C350073BFE0 /* UIPasscodeViewControllerDemo */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					845,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 301482441;
+			PBXWorkspaceStateSaveDate = 301482441;
+		};
+		perUserProjectItems = {
+			C61FAA8F11E76DE10052F878 /* PlistBookmark */ = C61FAA8F11E76DE10052F878 /* PlistBookmark */;
+			C696DC8011F84264005B1756 /* PBXTextBookmark */ = C696DC8011F84264005B1756 /* PBXTextBookmark */;
+			C696DC8111F84264005B1756 /* PBXTextBookmark */ = C696DC8111F84264005B1756 /* PBXTextBookmark */;
+			C696DC8211F84264005B1756 /* PBXTextBookmark */ = C696DC8211F84264005B1756 /* PBXTextBookmark */;
+			C696DC8311F84264005B1756 /* PBXTextBookmark */ = C696DC8311F84264005B1756 /* PBXTextBookmark */;
+			C6A2AE8F11E8BD7100EDB510 /* PBXTextBookmark */ = C6A2AE8F11E8BD7100EDB510 /* PBXTextBookmark */;
+		};
+		sourceControlManager = C63D0B0911E63C790073BFE0 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {684, 423}}";
+			sepNavSelRange = "{46, 0}";
+			sepNavVisRange = "{0, 415}";
+		};
+	};
+	C61FAA8F11E76DE10052F878 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* PTPasscodeViewControllerDemo-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIdentifier,
+		);
+		name = "/Users/lashad/MyProjects/iPhone/UIPasscodeViewController/UIPasscodeViewControllerDemo/UIPasscodeViewControllerDemo-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	C63D0ACE11E63C350073BFE0 /* UIPasscodeViewControllerDemo */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = UIPasscodeViewControllerDemo;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	C63D0B0911E63C790073BFE0 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	C63D0B0A11E63C790073BFE0 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C696DC8011F84264005B1756 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* PTPasscodeViewController.m */;
+		name = "PTPasscodeViewController.m: 156";
+		rLen = 0;
+		rLoc = 5935;
+		rType = 0;
+		vrLen = 1630;
+		vrLoc = 4468;
+	};
+	C696DC8111F84264005B1756 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286DF0D94DF7D0034E888 /* PTPasscodeViewController.h */;
+		name = "PTPasscodeViewController.h: 57";
+		rLen = 0;
+		rLoc = 1638;
+		rType = 0;
+		vrLen = 1278;
+		vrLoc = 426;
+	};
+	C696DC8211F84264005B1756 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PTPasscodeViewControllerDemoAppDelegate.m */;
+		name = "PTPasscodeViewControllerDemoAppDelegate.m: 39";
+		rLen = 0;
+		rLoc = 861;
+		rType = 0;
+		vrLen = 975;
+		vrLoc = 0;
+	};
+	C696DC8311F84264005B1756 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PTPasscodeViewControllerDemoAppDelegate.m */;
+		name = "PTPasscodeViewControllerDemoAppDelegate.m: 114";
+		rLen = 0;
+		rLoc = 3273;
+		rType = 0;
+		vrLen = 970;
+		vrLoc = 2448;
+	};
+	C6A2AE8F11E8BD7100EDB510 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* PTPasscodeViewControllerDemoAppDelegate.h */;
+		name = "UIPasscodeViewControllerDemoAppDelegate.h: 3";
+		rLen = 0;
+		rLoc = 81;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 0;
+	};
+}

@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'UIPasscodeViewControllerDemo' target in the 'UIPasscodeViewControllerDemo' project
+// Prefix header for all source files of the 'PTPasscodeViewControllerDemo' target in the 'PTPasscodeViewControllerDemo' project
 //
 #import <Availability.h>
 
