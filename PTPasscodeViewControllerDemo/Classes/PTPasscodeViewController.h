@@ -26,7 +26,7 @@
 #define kPasscodePanelThree        -640.0
 
 
-@protocol PasscodeViewControllerDelegate;
+@protocol PTPasscodeViewControllerDelegate;
 
 
 @interface PTPasscodeViewController : UITableViewController <UITextFieldDelegate> {
@@ -34,14 +34,14 @@
     UIView *_scrollView;
     UIView *currentPanel;
     
-    id<PasscodeViewControllerDelegate> _delegate;
+    id<PTPasscodeViewControllerDelegate> _delegate;
     
 }
 @property (nonatomic, readonly) UILabel *titleLabel;
 @property (nonatomic, readonly) UILabel *summaryLabel;
 
 @property (nonatomic, readonly) UIView *currentPanel;
-@property (nonatomic,assign) id<PasscodeViewControllerDelegate> delegate;
+@property (nonatomic,assign) id<PTPasscodeViewControllerDelegate> delegate;
 
 -(id)initWithDelegate:(id)delegate;
 - (void)clearPanel;
@@ -50,7 +50,7 @@
 @end
 
 
-@protocol PasscodeViewControllerDelegate <NSObject>
+@protocol PTPasscodeViewControllerDelegate <NSObject>
 @optional
 - (BOOL)shouldChangePasscode:(PTPasscodeViewController *)passcodeViewController panelView:(UIView*)panelView passCode:(NSUInteger)passCode lastNumber:(NSInteger)lastNumber;
 - (void)didShowPasscodePanel:(PTPasscodeViewController *)passcodeViewController panelView:(UIView*)panelView;

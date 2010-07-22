@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PTPasscodeViewController.h"
 
-@interface PTPasscodeViewControllerDemoAppDelegate : NSObject <UIApplicationDelegate,PasscodeViewControllerDelegate> {
+@interface PTPasscodeViewControllerDemoAppDelegate : NSObject <UIApplicationDelegate,PTPasscodeViewControllerDelegate> {
     
     UIWindow *_window;
     UINavigationController *_navigationController;
