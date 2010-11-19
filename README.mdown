@@ -4,10 +4,9 @@ PTPasscodeViewController
 Want a Passcode view for your iPhone/iPod project ? 
 Here's how to add a PTPasscodeViewController on your project with a few lines of code.
 
-
-![](https://files.me.com/lashad/x16phr)
-![](https://files.me.com/lashad/sa5cbk)
-![](https://files.me.com/lashad/0mxg45)
+[[/images/Passcode1.png]]
+[[/images/Passcode2.png]]
+[[/images/Passcode3.png]]
 
 How to use
 ----------
