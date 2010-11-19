@@ -6,7 +6,8 @@ Here's how to add a PTPasscodeViewController on your project with a few lines of
 
 [[/images/Passcode1.png]]
 [[/images/Passcode2.png]]
-[[/images/Passcode3.png]]
+[[http://geekwhat.com/wp-content/uploads/2009/09/apple-iphone-3g-01.jpg]]
+
 
 How to use
 ----------
