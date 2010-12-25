@@ -27,7 +27,8 @@
 #pragma mark View lifecycle
 
 -(id)initWithDelegate:(id)delegate {
-    if ((self = [super initWithStyle:UITableViewStyleGrouped])) {
+    //CGRect rect = [[UIScreen mainScreen] bounds];
+    if ((self = [super init])) {
         _delegate = delegate;            
     }
     return self;
@@ -125,6 +126,8 @@
     
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
     CGRect frm = CGRectMake(0.0, 0.0, kPasscodePanelWidth * kPasscodePanelCount, kPasscodePanelHeight);
     _scrollView = [[UILabel alloc] initWithFrame:frm];
 

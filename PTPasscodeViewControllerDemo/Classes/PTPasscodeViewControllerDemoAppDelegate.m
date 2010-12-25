@@ -94,15 +94,15 @@
     if([panelView tag] == kPasscodePanelOne) {
         _passCode = passCode;
         
-/*       
-        if(passCode != 1234) {
-            [[passcodeView summaryLabel] setText:@"Invalid PIN code"];
-            [[passcodeView summaryLabel] setTextColor:[UIColor redColor]];
-            [passcodeView clearPanel];
+       
+        if(_passCode != passCode) {
+            [[passcodeViewController summaryLabel] setText:@"Invalid PIN code"];
+            [[passcodeViewController summaryLabel] setTextColor:[UIColor redColor]];
+            [passcodeViewController clearPanel];
             return FALSE;
         }
- */
-        return ![passcodeViewController nextPanel];
+ 
+        //return ![passcodeViewController nextPanel];
     }
 
     if([panelView tag] == kPasscodePanelTwo) {

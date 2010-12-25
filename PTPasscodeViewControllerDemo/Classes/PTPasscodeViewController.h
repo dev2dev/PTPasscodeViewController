@@ -31,7 +31,7 @@
 @protocol PTPasscodeViewControllerDelegate;
 
 
-@interface PTPasscodeViewController : UITableViewController <UITextFieldDelegate> {
+@interface PTPasscodeViewController : UIViewController <UITextFieldDelegate> {
     
     UIView *_scrollView;
     UIView *currentPanel;
