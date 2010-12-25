@@ -95,14 +95,14 @@
         _passCode = passCode;
         
        
-        if(_passCode != passCode) {
+        /*if(_passCode != passCode) {
             [[passcodeViewController summaryLabel] setText:@"Invalid PIN code"];
             [[passcodeViewController summaryLabel] setTextColor:[UIColor redColor]];
             [passcodeViewController clearPanel];
             return FALSE;
-        }
+        }*/
  
-        //return ![passcodeViewController nextPanel];
+        return ![passcodeViewController nextPanel];
     }
 
     if([panelView tag] == kPasscodePanelTwo) {

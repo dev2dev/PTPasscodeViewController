@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* PTPasscodeViewControllerDemoAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1216, 1599}}";
-			sepNavSelRange = "{2599, 0}";
-			sepNavVisRange = "{2117, 1233}";
+			sepNavIntBoundsRect = "{{0, 0}, {1216, 1573}}";
+			sepNavSelRange = "{2995, 0}";
+			sepNavVisRange = "{2117, 1110}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* PTPasscodeViewControllerDemo */ = {
@@ -36,9 +36,9 @@
 	};
 	28C286E00D94DF7D0034E888 /* PTPasscodeViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1097, 3822}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1097, 3965}}";
 			sepNavSelRange = "{4529, 0}";
-			sepNavVisRange = "{3917, 1040}";
+			sepNavVisRange = "{6622, 929}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -109,16 +109,19 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 314955390;
-			PBXWorkspaceStateSaveDate = 314955390;
+			PBXPerProjectTemplateStateSaveDate = 314993121;
+			PBXWorkspaceStateSaveDate = 314993121;
 		};
 		perUserProjectItems = {
-			C607516112C5D7C400A81F97 /* PBXTextBookmark */ = C607516112C5D7C400A81F97 /* PBXTextBookmark */;
-			C607518412C5E35200A81F97 /* PBXTextBookmark */ = C607518412C5E35200A81F97 /* PBXTextBookmark */;
-			C607518512C5E35200A81F97 /* PBXTextBookmark */ = C607518512C5E35200A81F97 /* PBXTextBookmark */;
-			C607518712C5E4C200A81F97 /* PBXTextBookmark */ = C607518712C5E4C200A81F97 /* PBXTextBookmark */;
-			C607518812C5E4C200A81F97 /* PBXTextBookmark */ = C607518812C5E4C200A81F97 /* PBXTextBookmark */;
-			C61FAA8F11E76DE10052F878 /* PlistBookmark */ = C61FAA8F11E76DE10052F878 /* PlistBookmark */;
+			C607516112C5D7C400A81F97 = C607516112C5D7C400A81F97 /* PBXTextBookmark */;
+			C607518412C5E35200A81F97 = C607518412C5E35200A81F97 /* PBXTextBookmark */;
+			C607518512C5E35200A81F97 = C607518512C5E35200A81F97 /* PBXTextBookmark */;
+			C607518712C5E4C200A81F97 = C607518712C5E4C200A81F97 /* PBXTextBookmark */;
+			C607518812C5E4C200A81F97 = C607518812C5E4C200A81F97 /* PBXTextBookmark */;
+			C61FAA8F11E76DE10052F878 = C61FAA8F11E76DE10052F878 /* PlistBookmark */;
+			C657656C12C669F700BDCD9F /* PBXTextBookmark */ = C657656C12C669F700BDCD9F /* PBXTextBookmark */;
+			C657656D12C669F700BDCD9F /* PBXTextBookmark */ = C657656D12C669F700BDCD9F /* PBXTextBookmark */;
+			C657656E12C669F700BDCD9F /* PBXTextBookmark */ = C657656E12C669F700BDCD9F /* PBXTextBookmark */;
 		};
 		sourceControlManager = C63D0B0911E63C790073BFE0 /* Source Control */;
 		userBuildSettings = {
@@ -236,5 +239,35 @@
 	C63D0B0A11E63C790073BFE0 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	C657656C12C669F700BDCD9F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* PTPasscodeViewController.m */;
+		name = "PTPasscodeViewController.m: 119";
+		rLen = 0;
+		rLoc = 4529;
+		rType = 0;
+		vrLen = 929;
+		vrLoc = 6622;
+	};
+	C657656D12C669F700BDCD9F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PTPasscodeViewControllerDemoAppDelegate.m */;
+		name = "PTPasscodeViewControllerDemoAppDelegate.m: 93";
+		rLen = 0;
+		rLoc = 2599;
+		rType = 0;
+		vrLen = 1233;
+		vrLoc = 2117;
+	};
+	C657656E12C669F700BDCD9F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* PTPasscodeViewControllerDemoAppDelegate.m */;
+		name = "PTPasscodeViewControllerDemoAppDelegate.m: 105";
+		rLen = 0;
+		rLoc = 2995;
+		rType = 0;
+		vrLen = 1110;
+		vrLoc = 2117;
 	};
 }
